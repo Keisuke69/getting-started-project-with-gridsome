@@ -5,6 +5,14 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'Gridsome',
-  plugins: []
+  siteName: 'Coool Site!!!!',
+  plugins: [],
+  icon: {
+    favicon: './src/red-skull.png',
+    touchicon: {
+      src: './src/red-skull.png',
+      sizes: [76, 152, 120, 167],
+      precomposed: true
+    }
+  }
 }
