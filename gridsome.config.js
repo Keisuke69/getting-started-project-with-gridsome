@@ -5,14 +5,25 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'Coool Site!!!!',
-  plugins: [],
-  icon: {
-    favicon: './src/red-skull.png',
-    touchicon: {
-      src: './src/red-skull.png',
-      sizes: [76, 152, 120, 167],
-      precomposed: true
+  siteName: "Cooooool Site!!!!",
+  plugins: [
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        typeName: 'Post',
+        path: './blog/**/*.md',
+      }
     }
-  }
-}
+  ],
+  templates: {
+    Post: '/blog/:id'
+  },
+  icon: {
+    favicon: "./src/red-skull.png",
+    touchicon: {
+      src: "./src/red-skull.png",
+      sizes: [76, 152, 120, 167],
+      precomposed: true,
+    },
+  },
+};

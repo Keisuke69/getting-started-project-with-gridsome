@@ -4,3 +4,4 @@ package-lock.json
 .cache
 src/.temp
 .DS_Store
+dist
