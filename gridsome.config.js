@@ -8,15 +8,18 @@ module.exports = {
   siteName: "Cooooool Site!!!!",
   plugins: [
     {
-      use: '@gridsome/source-filesystem',
+      use: "@gridsome/source-wordpress",
       options: {
-        typeName: 'Post',
-        path: './blog/**/*.md',
-      }
-    }
+        baseUrl: "http://52.194.210.69/", // required
+        typeName: "blog",
+        apiBase: 'wp-json',
+        perPage: 10,
+        concurrent: 1,
+      },
+    },
   ],
   templates: {
-    Post: '/blog/:id'
+    BlogPost: "/:year/:month/:day/:slug",
   },
   icon: {
     favicon: "./src/red-skull.png",
