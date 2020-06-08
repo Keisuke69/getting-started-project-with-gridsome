@@ -5,3 +5,4 @@ package-lock.json
 src/.temp
 .DS_Store
 dist
+misc
