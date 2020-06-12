@@ -10,7 +10,7 @@ module.exports = {
     {
       use: "@gridsome/source-wordpress",
       options: {
-        baseUrl: "http://52.194.210.69/", // required
+        baseUrl: process.env.BASE_URL, // required
         typeName: "blog",
         apiBase: 'wp-json',
         perPage: 10,
